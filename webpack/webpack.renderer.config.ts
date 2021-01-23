@@ -1,11 +1,24 @@
-const webpack = require('webpack')
-const merge = require('webpack-merge')
+/**
+ * @project     snow-launch
+ *
+ * @fileName    webpack.renderer.config.ts
+ * @filePath    /webpack/webpack.renderer.config.ts
+ *
+ * @createdBy   Plume <plume.snowbot@gmail.com>
+ * @createdAt   2021-01-23, 20:56:42
+ *
+ * @updatedBy   Plume <plume.snowbot@gmail.com>
+ * @updatedAt   2021-01-23, 23:13:38
+ */
+
+import * as webpack from 'webpack'
+import * as merge from 'webpack-merge'
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
-const baseConfig = require('./webpack.base.config')
+import baseConfig from './webpack.base.config'
 
-module.exports = merge.smart(baseConfig, {
+export default merge.smart(baseConfig as any, {
     target: 'electron-renderer',
     entry: {
         app: ['@babel/polyfill', './src/renderer/app.tsx'],

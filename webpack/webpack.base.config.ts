@@ -1,12 +1,25 @@
+/**
+ * @project     snow-launch
+ *
+ * @fileName    webpack.main.config.ts
+ * @filePath    /webpack/webpack.main.config.ts
+ *
+ * @createdBy   Plume <plume.snowbot@gmail.com>
+ * @createdAt   2021-01-23, 20:51:30
+ *
+ * @updatedBy   Plume <plume.snowbot@gmail.com>
+ * @updatedAt   2021-01-23, 21:17:48
+ */
+
 'use strict'
 
-const path = require('path')
+import * as path from 'path'
 
-function srcPath(subdir) {
+function srcPath(subdir: string) {
     return path.resolve(__dirname, '../src', subdir)
 }
 
-module.exports = {
+export default {
     mode: 'development',
     output: {
         path: path.resolve(__dirname, '../dist'),
