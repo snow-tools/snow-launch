@@ -43,7 +43,7 @@ And then install the dependencies:
 
 ```bash
 cd snowlaunch # move in the project directory
-npm install --verbose # install all node.js dependencies
+npm run global:install # install all node.js dependencies
 ```
 
 ## Usage

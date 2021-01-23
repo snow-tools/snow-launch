@@ -1,13 +1,25 @@
-const merge = require('webpack-merge')
-const spawn = require('child_process').spawn
+/**
+ * @project     snow-launch
+ *
+ * @fileName    webpack.worker.dev.config.ts
+ * @filePath    /webpack/webpack.worker.dev.config.ts
+ *
+ * @createdBy   Plume <plume.snowbot@gmail.com>
+ * @createdAt   2021-01-23, 21:06:17
+ *
+ * @updatedBy   Plume <plume.snowbot@gmail.com>
+ * @updatedAt   2021-01-23, 21:12:29
+ */
 
-const baseConfig = require('./webpack.worker.config')
+import * as merge from 'webpack-merge'
+import { spawn } from 'child_process'
+
+import baseConfig from './webpack.worker.config'
 
 module.exports = merge.smart(baseConfig, {
     resolve: {
         alias: {
             'react-dom': '@hot-loader/react-dom',
-            ...baseConfig.resolve.alias,
         },
     },
     devServer: {
@@ -30,9 +42,9 @@ module.exports = merge.smart(baseConfig, {
                     env: process.env,
                     stdio: 'inherit',
                 })
-                    .on('close', code => process.exit(code))
+                    .on('close', code => process.exit(code || undefined))
                     .on('error', spawnError => console.error(spawnError))
             }
         },
     },
-})
+} as any)
