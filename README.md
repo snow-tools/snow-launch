@@ -1,0 +1,2 @@
+# Snowlaunch
+Snowbot launcher (proposal)
