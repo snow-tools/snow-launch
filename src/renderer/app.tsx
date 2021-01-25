@@ -8,7 +8,7 @@
  * @createdAt   2021-01-22, 22:58:15
  * 
  * @updatedBy   Plume <plume.snowbot@gmail.com>
- * @updatedAt   2021-01-23, 19:06:44
+ * @updatedAt   2021-01-24, 22:47:10
  */
 
 import './_style/global.scss'
@@ -18,6 +18,8 @@ import * as ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 
 import { MainFrame } from './MainFrame'
+
+import 'fomantic-ui-css/semantic.min.css'
 
 // Create main element
 const mainElement = document.createElement('div')

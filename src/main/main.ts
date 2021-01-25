@@ -8,7 +8,7 @@
  * @createdAt   2021-01-23, 01:23:23
  *
  * @updatedBy   Plume <plume.snowbot@gmail.com>
- * @updatedAt   2021-01-23, 19:10:07
+ * @updatedAt   2021-01-25, 00:18:23
  */
 
 import { app, BrowserWindow } from 'electron'
@@ -36,8 +36,8 @@ const createWindow = async () => {
         width: 800,
         height: 600,
         transparent: false,
-        frame: true,
-        backgroundColor: 'red',
+        frame: false,
+        hasShadow: true,
     })
 
     if (process.env.NODE_ENV !== 'production') {
