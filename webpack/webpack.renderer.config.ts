@@ -8,7 +8,7 @@
  * @createdAt   2021-01-23, 20:56:42
  *
  * @updatedBy   Plume <plume.snowbot@gmail.com>
- * @updatedAt   2021-01-23, 23:13:38
+ * @updatedAt   2021-01-24, 22:35:58
  */
 
 import * as webpack from 'webpack'
@@ -62,6 +62,14 @@ export default merge.smart(baseConfig as any, {
                         },
                     },
                 ],
+            },
+            {
+                test: /\.(woff|woff2|ttf|eot)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'fonts/[name].[ext]!static',
+                },
+                include: /node_modules/,
             },
             // All output '.js' files will have any sourcemaps re-processed by 'source-map-loader'.
             {
